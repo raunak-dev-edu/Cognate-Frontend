@@ -1,0 +1,29 @@
+.homecontent {
+    @include flexCenter;
+  }
+  
+.sidebar {
+  @include flexcolumn;
+  @include shadow;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  width: 15%;
+  height: 90vh;
+
+  &-link {
+    @include spaceBw;
+    gap: 1rem;
+    font-size: 1.5rem;
+    width: 100%;
+    
+    &-name{
+      @include textLeft;
+      width: 100%;
+    }
+  }
+}
+
+.contentarea {
+  width: 85%;
+  height: 90vh;
+}/*# sourceMappingURL=homecontent.css.map */
