@@ -26,4 +26,27 @@
 .contentarea {
   width: 85%;
   height: 90vh;
+  @include flexCenter;
+  @include shadow;
+  gap: 1rem;
+  .rtsp,
+  .stat{
+    @include shadow;
+  }
+
+  .livecam{
+    width: 100%;
+    border-bottom: 1px solid black;
+    background: #F5F5F5;
+    @include spaceBw;
+    .status{
+      @include flexCenter;
+      gap: 1rem;
+      width: 20%;
+      height: 100%;
+    }
+    .rotatelive{
+      padding-right: 1rem;
+    }
+  }
 }/*# sourceMappingURL=homecontent.css.map */

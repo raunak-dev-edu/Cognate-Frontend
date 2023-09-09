@@ -50,7 +50,7 @@ const Sidebar = () => {
         return(
             <div className="sidebar-link" key={item.id}>
                 {item.icons}
-                <Link className="sidebar-link-name" to={item.path}>
+                <Link className="sidebar-link-name" to={item.path} >
                   {item.name}
                 </Link>
             </div>

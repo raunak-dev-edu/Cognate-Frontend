@@ -91,7 +91,7 @@ const Signup = () => {
                     >
                         SignUp
                     </Button>
-                    <Text>Already have an account? <Link to='/'>Login Here</Link></Text>
+                    <Text>Already have an account? <Link to='/' style={{color:'rgba(0, 57, 117, 1)'}}>Login Here</Link></Text>
                 </VStack>
             </Box>
         </Container>

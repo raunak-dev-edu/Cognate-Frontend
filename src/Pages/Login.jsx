@@ -16,9 +16,10 @@ import {
 
 
 import logo from '../Images/logo.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate();
 
     const [show,setShow] = useState(false);
 
@@ -70,10 +71,11 @@ const Login = () => {
                         colorScheme='rgba(0, 57, 117, 1);                        '
                         width='100%'
                         style={{marginTop: 15}}
+                        onClick={() => navigate('/home')}
                     >
                         Login
                     </Button>
-                    <Text>Don't Have An Account? <Link to='/signup'>Create One</Link></Text>
+                    <Text>Don't Have An Account? <Link to='/signup' style={{color:'rgba(0, 57, 117, 1)'}}>Create One</Link></Text>
                 </VStack>
             </Box>
         </Container>
