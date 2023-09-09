@@ -5,7 +5,6 @@ import * as BsIcons from 'react-icons/bs';
 import * as RxIcons from 'react-icons/rx'
 
 import livecam from '../Images/livecam.png';
-
 const ContentArea = () => {
   return (
     <div className='contentarea'>
@@ -42,7 +41,6 @@ const ContentArea = () => {
           textAlign='center'
           className='stat'
         >
-
         </Box>
         <Box
           height={'10rem'}
