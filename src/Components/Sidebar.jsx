@@ -7,7 +7,7 @@ import * as Io5Icons from 'react-icons/io5';
 import * as IoIcons from 'react-icons/io';
 import * as MdIcons from 'react-icons/md'
 import * as RiIcons from 'react-icons/ri'
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 
 
 const sideContent = [
@@ -25,7 +25,7 @@ const sideContent = [
     },
     {
         id: 3,
-        path: '/doctors',
+        path: '/doctor',
         icons: <Fa6Icons.FaUserDoctor color='red'/>,
         name: 'Doctors',
     },
@@ -41,17 +41,21 @@ const sideContent = [
         icons: <RiIcons.RiLogoutBoxRFill color='red'/>,
         name: 'Logout',
     },
-]
+  ]
 
 const Sidebar = () => {
   return (
     <div className='sidebar'>
-      {sideContent.map((item) => {
+       {sideContent.map((item) => {
         return(
             <div className="sidebar-link" key={item.id}>
-                {item.icons}
-                <Link className="sidebar-link-name" to={item.path} >
-                  {item.name}
+                <Link className="sidebar-link-container" to={item.path}>
+                  <div className="sidebar-link-icon">
+                    {item.icons}
+                  </div>
+                  <div className="sidebar-link-name">
+                    {item.name}
+                  </div>
                 </Link>
             </div>
         )

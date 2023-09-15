@@ -1,18 +1,13 @@
-import { Route, Routes } from "react-router-dom"
-import Login from "./Pages/Login"
-import Signup from './Pages/Signup'
-import HomePage from "./Pages/HomePage"
-import Patients from "./Pages/Patients"
+import { BrowserRouter } from "react-router-dom"
+import HomePage from "./Components/HomePage"
 
 function App() {
   return (
-    <div className="app">
-      <Routes>
-        <Route path="/" element={<Login/>}/>
-        <Route path="/signup" element={<Signup/>}/>
-        <Route path="/home" element={<HomePage/>}/>
-      </Routes>
-    </div>
+      <div className="app">
+        <BrowserRouter>
+          <HomePage/>
+        </BrowserRouter>
+      </div>
   )
 }
 

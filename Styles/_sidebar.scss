@@ -1,0 +1,27 @@
+.sidebar{
+    @include flexcolumn;
+    @include flexCenter;
+    gap: 3rem;
+    width: 100%;
+    padding-top: 1rem;
+    &-link{
+        width: 100%;
+        &-icon{
+            font-size: 1.5rem;
+            margin-right: 1.5rem;
+        }
+        &-name{
+            width: 100%;
+            font-size: 1.5rem;
+        }
+        &-container{
+            @include spaceBw;
+            padding: 1rem 1rem 1rem 2rem;
+            &:hover{
+                background: rgb(187, 95, 95);
+                color: white;
+                // @include transition;
+            }
+        }
+    }
+}

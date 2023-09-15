@@ -1,0 +1,39 @@
+.content{
+    width: 100%;
+    padding: 2rem;
+}
+
+.dashboard{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 2rem;
+}
+
+.cctv{
+    width: 100%;
+    img{
+        width: 100%;
+    }
+    &-options{
+        padding: 0rem 1rem;
+        width: 100%;
+        background: grey;
+        @include spaceBw;
+        .status{
+            @include spaceBw;
+            gap: 1rem;
+        }
+    }
+}
+
+
+.data{
+    gap: 2rem;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    &-box{
+        @include shadow;
+    }
+}

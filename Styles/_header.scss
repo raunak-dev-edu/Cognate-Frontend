@@ -1,0 +1,23 @@
+.header{
+    @include spaceBw;
+    @include whitebg;
+    @include shadow;
+    width: 100%;
+    height: 10vh;
+    flex-shrink: 0;
+    padding: 1rem;
+}
+
+.homepage{
+    height: 100vh;
+}
+
+.screen-content{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    height: 90vh;
+}
+
+.sidebarBox{
+    @include shadow;
+}
