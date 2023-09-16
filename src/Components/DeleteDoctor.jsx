@@ -9,7 +9,7 @@ const DeleteDoctor = () => {
     <>
         <Button
             onClick={onOpen}
-            borderTopLeftRadius={'1rem'}
+            borderRadius={'1rem 0rem 0rem 0rem'}
             background={'red'}
             _hover={{background: '#cd0303'}}
             color={'white'}

@@ -18,9 +18,9 @@ const Form = ({ firstFieldRef, onCancel }) => {
           label='First name'
           id='first-name'
           ref={firstFieldRef}
-          defaultValue='John'
+          defaultValue='Munna'
         />
-        <TextInput label='Last name' id='last-name' defaultValue='Smith' />
+        <TextInput label='Last name' id='last-name' defaultValue='Bhai' />
         <ButtonGroup display='flex' justifyContent='flex-end'>
           <Button 
             variant='outline'
@@ -34,8 +34,8 @@ const Form = ({ firstFieldRef, onCancel }) => {
           </Button>
           <Button
             background={'rgba(0, 57, 117, 1)'}
-              _hover={{background: '#0350a4'}}
-              color={'white'}
+            _hover={{background: '#0350a4'}}
+            color={'white'}
            >
             Save
           </Button>
@@ -60,7 +60,7 @@ const EditDoctor = () => {
         >
           <PopoverTrigger>
           <Button 
-              borderTopRightRadius={'1rem'}
+              borderRadius={'0rem 1rem 0rem 0rem'}
               background={'rgba(0, 57, 117, 1)'}
               _hover={{background: '#0350a4'}}
               color={'white'}
