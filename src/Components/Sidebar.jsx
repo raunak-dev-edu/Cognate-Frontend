@@ -7,7 +7,7 @@ import * as Io5Icons from 'react-icons/io5';
 import * as IoIcons from 'react-icons/io';
 import * as MdIcons from 'react-icons/md'
 import * as RiIcons from 'react-icons/ri'
-import { Link, } from 'react-router-dom';
+import { Link, NavLink, } from 'react-router-dom';
 
 
 const sideContent = [
@@ -49,14 +49,28 @@ const Sidebar = () => {
        {sideContent.map((item) => {
         return(
             <div className="sidebar-link" key={item.id}>
-                <Link className="sidebar-link-container" to={item.path}>
+                <NavLink
+                  className="sidebar-link-container" 
+                  to={item.path}
+                >
                   <div className="sidebar-link-icon">
                     {item.icons}
                   </div>
                   <div className="sidebar-link-name">
                     {item.name}
                   </div>
-                </Link>
+                </NavLink>
+                {/* <Link 
+                  className="sidebar-link-container" 
+                  to={item.path}
+                >
+                  <div className="sidebar-link-icon">
+                    {item.icons}
+                  </div>
+                  <div className="sidebar-link-name">
+                    {item.name}
+                  </div>
+                </Link> */}
             </div>
         )
       })}

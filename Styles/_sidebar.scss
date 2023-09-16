@@ -1,7 +1,7 @@
 .sidebar{
     @include flexcolumn;
     @include flexCenter;
-    gap: 3rem;
+    gap: 1.5rem;
     width: 100%;
     padding-top: 1rem;
     &-link{
@@ -20,7 +20,6 @@
             &:hover{
                 background: rgb(187, 95, 95);
                 color: white;
-                // @include transition;
             }
         }
     }

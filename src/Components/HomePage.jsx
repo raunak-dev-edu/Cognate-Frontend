@@ -10,7 +10,10 @@ const HomePage = () => {
     <div className='homepage'>
         <Header/>
         <Box className="screen-content">
-            <Box className="sidebarBox" p={'0'}>
+            <Box 
+              className="sidebarBox" 
+              p={'0'}
+            >
                 <Sidebar/>
             </Box>
             <Box className="content">
