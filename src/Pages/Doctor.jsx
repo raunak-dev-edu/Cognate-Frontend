@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import doctor from '../Images/doctor.png'
 
@@ -7,13 +7,23 @@ import {
     Button,
     ButtonGroup,
     Container,
+    FormControl,
+    FormLabel,
     Heading,
     Input,
     InputGroup,
     InputLeftElement,
     InputRightAddon,
+    Modal,
+    ModalBody,
+    ModalCloseButton,
+    ModalContent,
+    ModalFooter,
+    ModalHeader,
+    ModalOverlay,
     SimpleGrid,
-    Text
+    Text,
+    useDisclosure
   } from "@chakra-ui/react";
 
 import { 
@@ -21,13 +31,15 @@ import {
   DeleteIcon,
   EditIcon
 } from "@chakra-ui/icons";
+import AddDoctor from '../Components/AddDoctor';
+import DeleteDoctor from '../Components/DeleteDoctor';
+import EditDoctor from '../Components/EditDoctor';
 
 const boxStyle = {
   padding : '1rem',
   borderRadius : '1rem',
   width : '15rem',
   height : 'auto',
-  // background : 'cyan',
   display : 'flex',
   alignItems : 'center',
   flexDirection : 'column',
@@ -85,6 +97,22 @@ const doctorList = [
     post : 'Surgeon, Cardiologist',
     degree: 'MBBS , MS Gen  Surgery'
   },
+  {
+    key: '07',
+    img: doctor,
+    name: 'Dr. Munna Bhai',
+    id: 'S011',
+    post : 'Surgeon, Cardiologist',
+    degree: 'MBBS , MS Gen  Surgery'
+  },
+  {
+    key: '08',
+    img: doctor,
+    name: 'Dr. Munna Bhai',
+    id: 'S011',
+    post : 'Surgeon, Cardiologist',
+    degree: 'MBBS , MS Gen  Surgery'
+  },
 ]
 
 
@@ -120,14 +148,7 @@ const Doctor = () => {
           </InputRightAddon>
 
         </InputGroup>
-        <Button
-          background={'rgba(0, 57, 117, 1)'}
-          borderRadius={'2rem'}
-          color={'#FFF'}
-          _hover={{background: '#0350a4'}}
-        >
-          + Add Doctor
-        </Button>
+        <AddDoctor/>
       </Box>   
 
       <SimpleGrid templateColumns='repeat(4, 1fr)' padding={'2rem'} gap={6}>
@@ -140,22 +161,8 @@ const Doctor = () => {
             top={0}
             left={0}
           >
-            <Button
-              background={'red'}
-              borderTopLeftRadius={'1rem'}
-              _hover={{background: '#cd0303'}}
-              color={'white'}
-            >
-              <DeleteIcon/>
-            </Button>
-            <Button
-              borderTopRightRadius={'1rem'}
-              background={'rgba(0, 57, 117, 1)'}
-              _hover={{background: '#0350a4'}}
-              color={'white'}
-            >
-              <EditIcon/>
-            </Button>
+            <DeleteDoctor/>
+            <EditDoctor/>
           </ButtonGroup>
 
           <img src={doctor} alt="" />
@@ -168,7 +175,7 @@ const Doctor = () => {
         {
           doctorList.map((doctor) => {
             return(
-              <Box sx={boxStyle} boxShadow={'0px 1px 4px 0px rgba(0, 0, 0, 0.25)'}>
+              <Box sx={boxStyle} boxShadow={'0px 1px 4px 0px rgba(0, 0, 0, 0.25)'} key={doctor.key}>
                 <ButtonGroup
                   display={'flex'}
                   justifyContent={'space-between'}
@@ -177,22 +184,8 @@ const Doctor = () => {
                   top={0}
                   left={0}
                 >
-                  <Button
-                    background={'red'}
-                    borderTopLeftRadius={'1rem'}
-                    _hover={{background: '#cd0303'}}
-                    color={'white'}
-                  >
-                    <DeleteIcon/>
-                  </Button>
-                  <Button
-                    borderTopRightRadius={'1rem'}
-                    background={'rgba(0, 57, 117, 1)'}
-                    _hover={{background: '#0350a4'}}
-                    color={'white'}
-                  >
-                    <EditIcon/>
-                  </Button>
+                  <DeleteDoctor/>
+                  <EditDoctor/>
                 </ButtonGroup>
 
                 <img src={doctor.img} alt="" />

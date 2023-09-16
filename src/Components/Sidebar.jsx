@@ -60,17 +60,6 @@ const Sidebar = () => {
                     {item.name}
                   </div>
                 </NavLink>
-                {/* <Link 
-                  className="sidebar-link-container" 
-                  to={item.path}
-                >
-                  <div className="sidebar-link-icon">
-                    {item.icons}
-                  </div>
-                  <div className="sidebar-link-name">
-                    {item.name}
-                  </div>
-                </Link> */}
             </div>
         )
       })}
