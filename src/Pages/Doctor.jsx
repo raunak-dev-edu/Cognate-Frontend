@@ -52,7 +52,7 @@ const doctorList = [
   {
     key: '01',
     img: doctor,
-    name: 'Dr. Munna Bhai',
+    name: 'Dr. Arjun Rana',
     id: 'S011',
     post : 'Surgeon, Cardiologist',
     degree: 'MBBS , MS Gen  Surgery'
@@ -60,7 +60,7 @@ const doctorList = [
   {
     key: '02',
     img: doctor,
-    name: 'Dr. Munna Bhai',
+    name: 'Dr. Arjun Rana',
     id: 'S011',
     post : 'Surgeon, Cardiologist',
     degree: 'MBBS , MS Gen  Surgery'
@@ -68,7 +68,7 @@ const doctorList = [
   {
     key: '03',
     img: doctor,
-    name: 'Dr. Munna Bhai',
+    name: 'Dr. Arjun Rana',
     id: 'S011',
     post : 'Surgeon, Cardiologist',
     degree: 'MBBS , MS Gen  Surgery'
@@ -76,7 +76,7 @@ const doctorList = [
   {
     key: '04',
     img: doctor,
-    name: 'Dr. Munna Bhai',
+    name: 'Dr. Arjun Rana',
     id: 'S011',
     post : 'Surgeon, Cardiologist',
     degree: 'MBBS , MS Gen  Surgery'
@@ -84,7 +84,7 @@ const doctorList = [
   {
     key: '05',
     img: doctor,
-    name: 'Dr. Munna Bhai',
+    name: 'Dr. Arjun Rana',
     id: 'S011',
     post : 'Surgeon, Cardiologist',
     degree: 'MBBS , MS Gen  Surgery'
@@ -92,7 +92,7 @@ const doctorList = [
   {
     key: '06',
     img: doctor,
-    name: 'Dr. Munna Bhai',
+    name: 'Dr. Arjun Rana',
     id: 'S011',
     post : 'Surgeon, Cardiologist',
     degree: 'MBBS , MS Gen  Surgery'
@@ -100,7 +100,7 @@ const doctorList = [
   {
     key: '07',
     img: doctor,
-    name: 'Dr. Munna Bhai',
+    name: 'Dr. Arjun Rana',
     id: 'S011',
     post : 'Surgeon, Cardiologist',
     degree: 'MBBS , MS Gen  Surgery'
@@ -108,7 +108,7 @@ const doctorList = [
   {
     key: '08',
     img: doctor,
-    name: 'Dr. Munna Bhai',
+    name: 'Dr. Arjun Rana',
     id: 'S011',
     post : 'Surgeon, Cardiologist',
     degree: 'MBBS , MS Gen  Surgery'
@@ -151,8 +151,17 @@ const Doctor = () => {
         <AddDoctor/>
       </Box>   
 
-      <SimpleGrid templateColumns='repeat(4, 1fr)' padding={'2rem'} gap={6}>
-        <Box sx={boxStyle} boxShadow={'0px 1px 4px 0px rgba(0, 0, 0, 0.25)'}>
+      <SimpleGrid 
+        templateColumns='repeat(4, 1fr)' 
+        padding={'2rem'} 
+        // gap={6}
+        gridGap={'4rem'}
+      >
+        <Box 
+          sx={boxStyle} 
+          boxShadow={'0px 1px 4px 0px rgba(0, 0, 0, 0.25)'}
+          outline={'1px solid rgba(0, 57, 117, 1)'}
+        >
           <ButtonGroup
             display={'flex'}
             justifyContent={'space-between'}
@@ -161,21 +170,27 @@ const Doctor = () => {
             top={0}
             left={0}
           >
-            <DeleteDoctor/>
-            <EditDoctor/>
+            {/* <DeleteDoctor/> */}
+            {/* <EditDoctor/> */}
           </ButtonGroup>
 
           <img src={doctor} alt="" />
-          <Heading  size={'md'}>Dr.John White </Heading>
+          <Heading  size={'md'}>Dr. John White </Heading>
           <Heading  size={'sm'}>ID - D001</Heading>
           <Text  size={'md'}>Surgeon, Cardiologist</Text>
           <Text  size={'md'}>MBBS , MS Gen  Surgery</Text>
+          <EditDoctor/>
         </Box>
 
         {
           doctorList.map((doctor) => {
             return(
-              <Box sx={boxStyle} boxShadow={'0px 1px 4px 0px rgba(0, 0, 0, 0.25)'} key={doctor.key}>
+              <Box
+               sx={boxStyle} 
+               boxShadow={'0px 1px 4px 0px rgba(0, 0, 0, 0.25)'} 
+               key={doctor.key}
+               outline={'1px solid rgba(0, 57, 117, 1)'}
+              >
                 <ButtonGroup
                   display={'flex'}
                   justifyContent={'space-between'}
@@ -184,15 +199,15 @@ const Doctor = () => {
                   top={0}
                   left={0}
                 >
-                  <DeleteDoctor/>
-                  <EditDoctor/>
+                  {/* <DeleteDoctor/> */}
                 </ButtonGroup>
 
                 <img src={doctor.img} alt="" />
                 <Heading  size={'md'}>{doctor.name}</Heading>
-                <Heading size={'sm'}>{doctor.id}</Heading>
+                <Heading size={'sm'}>ID - {doctor.id}</Heading>
                 <Text size={'md'}>{doctor.post}</Text>
                 <Text size={'md'}>{doctor.degree}</Text>
+                <EditDoctor/>
               </Box>
             )
           })

@@ -3,11 +3,15 @@ import React from 'react'
 import Header from '../Components/Header';
 import Sidebar from '../Components/Sidebar';
 import NavPage from '../Components/NavPage';
-import { Box } from '@chakra-ui/react';
+import { Box, Container } from '@chakra-ui/react';
 
 const HomePage = () => {
   return (
-    <div className='homepage'>
+    <Box 
+      className='homepage' 
+      size={'xl'} 
+      overflowX={'hidden'}
+    >
         <Header/>
         <Box className="screen-content">
             <Box 
@@ -20,7 +24,7 @@ const HomePage = () => {
                 <NavPage/>
             </Box>
         </Box>
-    </div>
+    </Box>
   )
 }
 

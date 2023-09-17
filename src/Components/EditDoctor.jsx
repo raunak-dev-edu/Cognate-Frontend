@@ -2,6 +2,8 @@ import { EditIcon } from '@chakra-ui/icons'
 import { Button, ButtonGroup, FocusLock, FormControl, FormLabel, IconButton, Input, Popover, PopoverArrow, PopoverCloseButton, PopoverContent, PopoverTrigger, Stack, useDisclosure } from '@chakra-ui/react'
 import React from 'react'
 
+import {BsCircle} from 'react-icons/bs';
+
 const TextInput = React.forwardRef((props, ref) => {
     return (
       <FormControl>
@@ -18,9 +20,9 @@ const Form = ({ firstFieldRef, onCancel }) => {
           label='First name'
           id='first-name'
           ref={firstFieldRef}
-          defaultValue='Munna'
+          defaultValue='Arjun'
         />
-        <TextInput label='Last name' id='last-name' defaultValue='Bhai' />
+        <TextInput label='Last name' id='last-name' defaultValue='Rana' />
         <ButtonGroup display='flex' justifyContent='flex-end'>
           <Button 
             variant='outline'
@@ -59,12 +61,16 @@ const EditDoctor = () => {
           closeOnBlur={false}
         >
           <PopoverTrigger>
-          <Button 
-              borderRadius={'0rem 1rem 0rem 0rem'}
-              background={'rgba(0, 57, 117, 1)'}
-              _hover={{background: '#0350a4'}}
-              color={'white'}
-            >
+
+            <Button 
+              _hover={{background: '#0350a4',color: 'white'}}
+              outline={'1px solid rgba(179,179,179)'}
+              color={'rgba(67,67,67)'}
+              position={'absolute'}
+              top={'95%'}
+              left={'40%'}
+              padding={'1rem'}
+              >
               <EditIcon/>
             </Button>
           </PopoverTrigger>
